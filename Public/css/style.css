@@ -1,0 +1,227 @@
+body {
+    position: relative;
+    background-image: url("../img/home_bg.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.form-container {
+    background-image: url("../img/blue_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 924px;
+    height: 422px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-text {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.signup-text a {
+    margin-top: 30px;
+    background-image: url("../img/sign-up.png");
+    height: 52px;
+    width: 142px;
+}
+.signup-text span {
+    position: absolute;
+    background-image: url("../img/line.png");
+    height: 5px;
+    width: 43px;
+    top: 20%;
+}
+.signup-text img{
+    max-width: 100%;
+    height: auto;
+}
+.login-text {
+    position: relative;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+.login-text a {
+    margin-top: 30px;
+    background-image: url("../img/login-def.png");
+    height: 52px;
+    width: 142px;
+}
+.login-text a:hover {
+    background-image: url("../img/login-hover.png");
+    height: 52px;
+    width: 142px;
+    transition: .1s ease-in-out;
+}
+.login-text span{
+    position: absolute;
+    background-image: url("../img/line.png");
+    height: 5px;
+    width: 43px;
+    top: 25%;
+}
+.login-text img{
+    max-width: 100%;
+    height: auto;
+}
+.login-form{
+    position: absolute;
+    background-image: url("../img/form-container.png");
+    height: 464px;
+    width: 464px;
+    top: -123px;
+    left: -40%;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s linear;
+}
+
+.register-form{
+    position: absolute;
+    background-image: url("../img/form-container.png");
+    height: 464px;
+    width: 464px;
+    top: -123px;
+    left: -40%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s linear;
+}
+
+.register-form-left{
+    left: -193%;
+    transition: .5s linear;
+    opacity: 1;
+    z-index: 1;
+}
+.login-form-left{
+    left: -193%;
+    z-index: 0;
+    opacity: 0;
+    transition: .5s linear;
+}
+
+.login-form form,
+.register-form form{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-form input,
+.register-form input {
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.login-form input:focus,
+.register-form input:focus{
+    border: none;
+    outline: none;
+    padding-top: 10px;
+}
+
+.input-line {
+    background-image: url("../img/input_line.png");
+    height: 3px;
+    width: 284px;
+}
+
+.float-right{
+    float: right;
+}
+
+#forgot {
+    background-image: url("../img/forgot.png");
+    width: 50px;
+    height: 15px;
+    float: right;
+    margin-top: 17%;
+}
+
+#submit_register {
+    background-image: url("../img/sign-up.png");
+}
+
+#submit_login {
+    background-image: url("../img/login-def.png");
+    height: 52px;
+    width: 142px;
+    float: left;
+}
+
+#submit_login:hover {
+    background-image: url("../img/login-hover.png");
+}
+
+.copy-rights {
+    background-image: url("../img/copyrights.png");
+    height: 10px;
+    width: 284px;
+
+    position: absolute;
+    margin-top: 320px;
+}
+
+/*****************
+
+HOME
+
+****************** */
+
+
+#user_age {
+    max-width: 50px;
+}
+
+.flex {
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.float-right{
+    float: right;
+}
+
+.btn-remove {
+    background-color: #ffaa7d;
+    border-radius: 100%;
+    padding: 1px 3px;
+    cursor: pointer;
+    float: right;
+}
+.btn-remove:hover {
+    background-color: #ffaa7d;
+    border-radius: 100%;
+    padding: 2px 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
