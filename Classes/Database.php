@@ -1,6 +1,6 @@
 <?php
 
-require_once("./config.php");
+require_once("./configForDatabase.php");
 
 class Database
 {
@@ -10,6 +10,8 @@ class Database
         try {
             return new PDO("mysql:host=".SERVERNAME.";dbname=".DATABASE, USERNAME, PASSWORD);
         } catch (PDOException $e){
+
+            //For better readability
 
             echo '<script>';
             echo 'console.log('. json_encode( $e->getMEssage() ) .')';

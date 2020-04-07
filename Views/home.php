@@ -36,6 +36,8 @@
 
 <script>
 
+    //Yes. this is not good place for JS.. this must be in Public/js/ folder with extension js.
+    //....
     //User object
 
     let data = <?php  echo $user->toJson(); ?>;

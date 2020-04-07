@@ -2,6 +2,8 @@
  *
  * When framework is not allowed, then create small library.
  *
+ *More info , comments don't need. same/ similar functions as JQuery.
+ *
  * @param selector
  *
  */
@@ -16,7 +18,6 @@ function MagicUnicorn(selector) {
             xhttp.open("POST", url, true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhttp.send(data);
-            console.log("Thanks for using cheeap PostRequests via MagicUnicorn.");
             return this;
         },
 
@@ -39,6 +40,14 @@ function MagicUnicorn(selector) {
                 item.addEventListener("click", callback);
             });
             return this;
+        },
+
+        getValue: () => {
+            let value;
+            self.each(function (item) {
+                value = item.value;
+            });
+            return value;
         },
 
         setValue: (valueToSet) => {
