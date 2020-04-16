@@ -13,6 +13,3 @@ function redirect(string $location)
     exit;
 }
 
-function dd($el){
-    var_dump($el);die;
-}

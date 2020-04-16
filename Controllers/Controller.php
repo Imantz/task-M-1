@@ -1,6 +1,6 @@
 <?php
 
-class Controller extends Database
+class Controller
 {
 
 }

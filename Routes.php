@@ -1,33 +1,33 @@
 <?php
 
 Route::set("/",function(){
-    WelcomeController::index();
-});
-
-Route::set("",function(){
-    WelcomeController::index();
-});
-
-Route::set("/home",function(){
     HomeController::index();
 });
 
+Route::set("",function(){
+    HomeController::index();
+});
+
+Route::set("/home",function(){
+    HomeController::welcome();
+});
+
 Route::set("/register",function(){
-    RegisterController::storeUser();
+    UserController::store();
 });
 
 Route::set("/login",function(){
-    LoginController::logIn();
+    UserController::logIn();
 });
 
 Route::set("/logout",function(){
-    LogoutController::logOut();
+    UserController::logOut();
 });
 
 Route::set("/update",function(){
-    UpdateTablesController::update();
+    UserController::update();
 });
 
 Route::set("/delete",function(){
-    DeleteController::delete();
+    UserController::delete();
 });

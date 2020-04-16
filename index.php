@@ -1,7 +1,7 @@
 <?php
-
 session_start();
 
+require_once("./configForDatabase.php");
 require_once("functions.php");
 require_once("Routes.php");
 
@@ -30,12 +30,8 @@ function __autoload($somethingToAutoload) {
 }
 
 
-//Create UserTable and attribute table
-
-Database::createUserTable();
-Database::createAttributeTable();
-
-
+TableMaker::createUsersTable();
+TableMaker::createAttributeTable();
 
 
 

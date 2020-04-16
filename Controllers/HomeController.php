@@ -3,29 +3,28 @@
 
 class HomeController extends Controller
 {
+    //return index view
 
-    public static function index()
+    public static function index(){
+        view("index");
+    }
+
+    public static function welcome()
     {
+        $session_id = $_SESSION["user_id"];
 
-        //Yes I know. Would be nice to create middleware for this option to check if user ir auth or not.
-        //and some kind session manager to check sessions. Session Errorrors and more..
-
-        if ( isset( $_SESSION['user_id'] ) ) {
-
-            $user = Database::select("users","id","User");
-
-            $attributes = json_encode(Database::selectAll("attributes","user_id"));
-
-            //pass user and attributes to home view.
-            //where js take care about them..
-            
-            view("home", ["user"=>$user,"attributes"=>$attributes]);
-
-        } else {
-
+        if(!$session_id)
+        {
             redirect("/");
-
         }
+
+        $user = User::getUserById($session_id);
+        $attributes = Attribute::getAllAttributesJson($user->id);
+
+        view("home", [
+            "user"=> $user,
+            "attributes"=>$attributes
+        ]);
 
     }
 }
